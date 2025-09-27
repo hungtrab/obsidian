@@ -1,6 +1,7 @@
 
 ---
 
+Date: 27/9
 # Summary and Review of "ASAP: Attention-Based State Space Abstraction for Policy Summarization"
 
 ### General Information

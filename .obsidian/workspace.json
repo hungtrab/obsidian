@@ -39,10 +39,14 @@
             "id": "e2c8459cdba1e108",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Paper in XAI/ASAP - ACML 2023.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ASAP - ACML 2023"
             }
           }
         ],
