@@ -9,6 +9,7 @@
 
 **arXiv ID**: [2411.12173v1](https://arxiv.org/abs/2411.12173)
 
+**File**: ![[SkillTree2411.12173v1.pdf]]
 ### **TL;DR** 📝
 
 SkillTree is a new hierarchical framework that makes deep reinforcement learning (DRL) more transparent and understandable, especially for complex, long-term robotic tasks. It tackles the "black-box" problem of typical DRL models by using a **decision tree** as its high-level policy. Instead of learning complex, continuous actions directly, SkillTree first learns a set of discrete, reusable "skills". The decision tree then simply learns which skill to select based on the current state, making the agent's decision-making process easy to interpret. The method achieves performance comparable to traditional neural network-based approaches while providing clear, skill-level explanations for its actions.
@@ -19,11 +20,11 @@ SkillTree is a new hierarchical framework that makes deep reinforcement learning
 - **Limitations of Traditional Explainable Models**: Decision Trees (DTs) are a well-known alternative that are inherently explainable due to their simple, rule-based structure. However, they have significant drawbacks in complex scenarios:
     
     - **Long-Horizon Tasks**: They struggle to capture the extended decision-making processes required for long-term goals, leading to overly complex and hard-to-optimize trees.
-        
+    
     - **High-Dimensional Spaces**: They lack the expressive power to effectively handle the high-dimensional observation spaces common in robotics.
-        
+    
     - **Continuous Actions**: Their discrete nature (limited leaf nodes) makes it difficult to effectively represent the continuous control policies needed for precise robotic manipulation.
-        
+    
 
 SkillTree aims to overcome these challenges by combining the strengths of both approaches: the hierarchical abstraction of skill-based learning and the inherent interpretability of decision trees.
 
@@ -35,38 +36,31 @@ The SkillTree framework is implemented in three main stages:
 
 #### 1. Learning Discrete Skill Embeddings 📚
 
-The first step is to create a fixed set of meaningful, reusable behaviors, or "skills"18.
+The first step is to create a fixed set of meaningful, reusable behaviors, or "skills".
 
-- **Data and Model**: This stage uses a task-agnostic offline dataset of trajectories (state-action sequences)19. A model inspired by
+- **Data and Model**: This stage uses a task-agnostic offline dataset of trajectories (state-action sequences). A model inspired by **VQ-VAE** is used to process fixed-length segments of these trajectories.
     
-    **VQ-VAE** is used to process fixed-length segments of these trajectories20.
+- **Codebook Creation**: An encoder maps a trajectory segment to a continuous embedding vector ($z_e$). This vector is then "quantized" by finding the closest matching embedding in a learnable **"codebook"** or "skill table" (Z). This process forces the agent to learn a discrete set of K representative skills.
     
-- **Codebook Creation**: An encoder maps a trajectory segment to a continuous embedding vector (ze​)21. This vector is then "quantized" by finding the closest matching embedding in a learnable
-    
-    **"codebook"** or "skill table" (Z)22222222. This process forces the agent to learn a discrete set of K representative skills.
-    
-- **Policies and Prior**: A state-conditioned decoder serves as the low-level policy (πl​), learning to reconstruct the original actions from a state and a given skill embedding (zq​)23. Simultaneously, a
-    
-    **skill prior** (p(k∣s)) is trained to predict the most likely skill based only on the initial state of a sequence, which helps guide exploration later on24.
-    
+- **Policies and Prior**: A state-conditioned decoder serves as the low-level policy ($\pi_l$​), learning to reconstruct the original actions from a state and a given skill embedding ($z_q$). Simultaneously, a **skill prior** (p(k∣s)) is trained to predict the most likely skill based only on the initial state of a sequence, which helps guide exploration later on.    
 
 #### 2. Training the Explainable High-Level Policy 🌳
 
 With the discrete skills learned, the next stage is to train a high-level policy (πh​) for the specific downstream task.
 
-- **Hierarchical Control**: The high-level policy operates at a lower frequency (e.g., every _h_ steps)25. At each decision point, it observes the current state and outputs a probability distribution over the discrete skill indices (0 to K-1)26.
-    
-- **Differentiable Decision Tree**: Crucially, this high-level policy is implemented not as a neural network, but as a **differentiable soft decision tree**27272727. This allows the tree's parameters (decision boundaries at each node) to be optimized using standard backpropagation algorithms like Soft Actor-Critic (SAC)28282828.
-    
-- **Guided Learning**: The training is regularized by the previously learned skill prior. The objective function encourages the policy to not deviate too far from the prior's predictions, improving learning efficiency29.
-    
+- **Hierarchical Control**: The high-level policy operates at a lower frequency (e.g., every _h_ steps). At each decision point, it observes the current state and outputs a probability distribution over the discrete skill indices (0 to K-1).
+
+- **Differentiable Decision Tree**: Crucially, this high-level policy is implemented not as a neural network, but as a **differentiable soft decision tree**. This allows the tree's parameters (decision boundaries at each node) to be optimized using standard backpropagation algorithms like Soft Actor-Critic (SAC).
+
+- **Guided Learning**: The training is regularized by the previously learned skill prior. The objective function encourages the policy to not deviate too far from the prior's predictions, improving learning efficiency.
+
 
 #### 3. Distilling into a Simpler Tree 🔬
 
 The final soft decision tree is explainable but can still be complex. The final stage simplifies it further.
 
-- **Imitation Learning**: The trained soft decision tree policy is used as an "expert" to generate new trajectories for the task30.
-    
+- **Imitation Learning**: The trained soft decision tree policy is used as an "expert" to generate new trajectories for the task.
+
 - **Simplification**: A traditional, simpler "hard" decision tree algorithm like **CART** is then trained on this new dataset of state-skill pairs31.
     
 - **Final Model**: This process distills the knowledge from the soft tree into a much simpler, more interpretable model with fewer parameters, while preserving high performance32323232.
