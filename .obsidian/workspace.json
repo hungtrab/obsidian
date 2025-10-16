@@ -4,24 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "66f7246e565de7ab",
+        "id": "bd6ca7b9faad541a",
         "type": "tabs",
         "children": [
           {
-            "id": "9fc88b3b17eb80ab",
+            "id": "a859de66fa4a0d87",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "This week.md",
+                "file": "Compression/Quantization/LLM.int8().md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "This week"
+              "title": "LLM.int8()"
+            }
+          },
+          {
+            "id": "924c10dbda5f97c3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lich/2025-10-16.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-10-16"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -175,7 +190,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -189,45 +204,45 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9fc88b3b17eb80ab",
+  "active": "924c10dbda5f97c3",
   "lastOpenFiles": [
-    "Utilities.md",
-    "This week.md",
+    "Compression/Research Stack.md",
+    "Compression/Category/Weight-Activation Quantization.md",
+    "Compression/Quantization/OmniQuant.md",
+    "Compression/Quantization/BitDistiller.md",
+    "Compression/Quantization/OBQ.md",
+    "Lich/2025-10-16.md",
+    "Compression/Quantization/LLM.int8().md",
+    "Compression/Quantization/ZeroQuant.md",
+    "Lich/2025-10-15.md",
+    "Lich/2025-10-14.md",
+    "Lich/Calendar.md",
+    "Compression/Quantization/OneBit.md",
+    "Lich/2025-10-13.md",
+    "Weekly Events.md",
+    "RL/Hugging Face RL.md",
     "Things left to learn.md",
-    "OS 16-9.md",
-    "Hugging Face RL.md",
-    "Giải thích RL_ Tính chất nhân và game.md",
-    "Active.md",
-    "Lich/2025-09-29.md",
-    "Template/Daily Template.md",
-    "Paper in XAI/LLM Boostrapping - AAAI 2024.md",
-    "Paper in XAI/XAI in Reinforcement Learning.md",
-    "Paper in XAI/SkillTree - AAAI 2025.md",
-    "Paper in XAI/VIPER - NeurIPS 2018.md",
+    "Untitled.md",
+    "Compression/Model Compression Overview.md",
+    "Compression/Mentioned methods.md",
+    "Compression/Quantization/LLM-QAT.md",
+    "KTCT.md",
+    "Compression/Quantization/SqueezeLLM.md",
+    "Compression/Category/Magnitude-based Pruning.md",
+    "Other paper/SPiRL.md",
+    "Compression/Category/Weight-Only Quantization.md",
+    "Compression/Category/Post-Training Quantization.md",
+    "Compression/Quantization",
+    "Compression/Category",
+    "Compression",
+    "RL",
     "Paper in XAI/ViperBastaniPS18.pdf",
-    "Paper in XAI/ASAP - ACML 2023.md",
     "Paper in XAI/SCoBotsNeurIPS-2024-interpretable-concept-bottlenecks-to-align-reinforcement-learning-agents-Paper-Conference.pdf",
     "Paper in XAI/[ASAP]highlighted_bekkemoen24a.pdf",
     "Paper in XAI/SkillTree2411.12173v1.pdf",
     "Paper in XAI/bootstrap_llm2403.00810v1.pdf",
-    "Other paper/DAGGER.md",
-    "Paper in XAI/SCoBots - NeurIPS 2024.md",
-    "Calendar.md",
     "Other paper",
-    "Performance monitoring.md",
     "Untitled.canvas",
-    "webdev/Lộ trình học Next.js cho người mới.md",
-    "Note for ASAP Code.md",
-    "Pasted image 20250927003246.png",
-    "Paper in XAI",
-    "webdev/01-nen-tang-bat-bien.md",
-    "Cấu trúc tài liệu HTML.md",
-    "Lich/2025-09-17.md",
-    "Lich/2025-07-28.md",
-    "Lich/2025-09-23.md",
-    "webdev/05-he-sinh-thai-chuyen-nghiep.md",
-    "webdev",
-    "Template",
-    "Lich"
+    "Pasted image 20250927003246.png"
   ]
 }

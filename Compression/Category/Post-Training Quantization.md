@@ -1,0 +1,1 @@
+- Groups into 3 subcategories: Weight-Only Quantization [[Weight-Only Quantization]]; Weight-Activation Quantization [[Weight-Activation Quantization]] and KV Cache Quantization [[KV Cache Quantization]]

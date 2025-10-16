@@ -38,7 +38,7 @@ The paper's solution is a two-stage process:
     
 2. Second, use the
     
-    **VIPER** algorithm to distill the knowledge from the oracle into a simple, structured, and verifiable decision tree policy that mimics the oracle's performance10.
+    **VIPER** algorithm to distill the knowledge from the oracle into a simple, structured, and verifiable decision tree policy that mimics the oracle's performance.
     
 
 This approach combines the learning power of DNNs with the verifiability of decision trees.
@@ -51,7 +51,7 @@ VIPER is built upon an improved imitation learning algorithm called **Q-DAGGER**
 
 ### 3.1. Q-DAGGER: A Theoretical Foundation
 
-The authors first propose Q-DAGGER, an extension of the well-known imitation learning algorithm **[DAGGER](https://www.cs.cmu.edu/~sross1/publications/Ross-AIStats11-NoRegret.pdf)** (Dataset Aggregation).
+The authors first propose Q-DAGGER, an extension of the well-known imitation learning algorithm **[DAGGER](https://www.cs.cmu.edu/~sross1/publications/Ross-AIStats11-NoRegret.pdf)** (Dataset Aggregation).**[[DAGGER]]**
 
 - **Standard DAGGER:** Uses a 0-1 loss, treating all mistakes equally. It only cares if the learner's action matches the expert's.
 

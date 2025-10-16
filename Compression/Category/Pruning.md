@@ -1,0 +1,1 @@
+Consists of Unstructured Pruning [[Unstructured Pruning]], Semi-Structured Pruning [[Semi-Structured Pruning]], and Structured Pruning [[Structured Pruning]].

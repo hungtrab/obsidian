@@ -43,7 +43,7 @@ The first step is to create a fixed set of meaningful, reusable behaviors, or "s
 - **Codebook Creation**: An encoder maps a trajectory segment to a continuous embedding vector ($z_e$). This vector is then "quantized" by finding the closest matching embedding in a learnable **"codebook"** or "skill table" (Z). This process forces the agent to learn a discrete set of K representative skills.
     
 - **Policies and Prior**: A state-conditioned decoder serves as the low-level policy ($\pi_l$​), learning to reconstruct the original actions from a state and a given skill embedding ($z_q$). Simultaneously, a **skill prior** (p(k∣s)) is trained to predict the most likely skill based only on the initial state of a sequence, which helps guide exploration later on.    
-
+- SkillTree is built on [[SPiRL]]'s base
 #### 2. Training the Explainable High-Level Policy 🌳
 
 With the discrete skills learned, the next stage is to train a high-level policy (πh​) for the specific downstream task.

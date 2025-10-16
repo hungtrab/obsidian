@@ -7,3 +7,8 @@
 - [x] SCoBots [[SCoBots - NeurIPS 2024]]
 ### LLM Approach
 - [ ] Bootstrapping Cognitive Agents with a LLM [[LLM Boostrapping - AAAI 2024]]
+
+### Hierarchy Levels
+
+### Idea
+[[Multiplicative Features in XRL, Games]] - Tìm hiểu interaction giữa các feature

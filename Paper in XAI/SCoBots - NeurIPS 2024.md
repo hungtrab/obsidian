@@ -97,3 +97,12 @@ The authors acknowledge several limitations:
 ### Conclusion
 
 SCoBots represent an important step towards building more transparent, trustworthy, and aligned **[Reinforcement Learning](https://en.wikipedia.org/wiki/Reinforcement_learning)** agents. By structuring the agent's reasoning process around human-understandable concepts and their relationships, the framework not only achieves competitive performance but also empowers human experts to diagnose and remedy critical flaws like goal misalignment, paving the way for safer and more reliable AI systems.
+
+#### Note
+
+frame motion
+- Chạy yolo, yolo đọc object, vị trí tương đối,  sau đó check đầu ra encode cuối, extract ra 2 frame liên tiếp, xem có feature nào correlation với khoảng cách ko, đầu vào ko; nếu ko thì phải guided cho align.  - phải guide 1 mô hình fit với concept từ yolo
+
+- Cần diễn giải bot cũ, hoàn thiện hơn
+
+- Chủ đề, từ rule, measure lại, estimate lại trong các môi trường khác. Dùng diễn giải đánh giá kn tổng quát hóa của con agent mới train -> có thể tốt hơn ko

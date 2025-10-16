@@ -1,0 +1,1 @@
+Divided into Loss-based Pruning [[Loss-based Pruning]], Magnitude-based Pruning [[Magnitude-based Pruning]], Regularization-based Pruning [[Regularization-based Pruning]].
